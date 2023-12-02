@@ -25,7 +25,7 @@ public partial class Day2(string pathToInput) : ProblemSolver(pathToInput)
     public override string SolveProblem2()
     {
         return InputLines
-            .Select((l, i) => (GameId: i + 1,
+            .Select((l, i) => (
                 MaxBlueCount: BlueRegex().Matches(l)
                     .Select(m => int.Parse(m.Value.Split(" ")[0]))
                     .Max(),
